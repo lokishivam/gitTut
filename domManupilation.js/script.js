@@ -12,3 +12,8 @@ for(var i = 0; i < lists.length; i++){
 }
 
 lists[2].style.backgroundColor = "green";
+
+const lis = document.getElementsByTagName('li');
+for(var i = 0; i < lis.length; i++){
+    lis[i].style.fontWeight = "bold";
+}
