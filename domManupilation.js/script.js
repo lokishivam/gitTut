@@ -17,3 +17,7 @@ const lis = document.getElementsByTagName('li');
 for(var i = 0; i < lis.length; i++){
     lis[i].style.fontWeight = "bold";
 }
+
+var second = document.querySelector('.list-group-item');
+console.log(second);
+second.style.backgroundColor = 'green';
