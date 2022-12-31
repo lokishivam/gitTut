@@ -9,8 +9,13 @@ btn.addEventListener('click', e => {
     console.log(name.value, email.value) 
     localStorage.setItem(email.value, JSON.stringify({name : name.value , phone : phone.value ,email : email.value}));  
     const li =  document.createElement('li');
+    const button = document.createElement('button');
+    button.innerText = 'delete';
+    button.className = 'delete';
     li.innerText = `${name.value} ${email.value} ${phone.value}`;
+    li.appendChild(button);
     list.appendChild(li);
+
     //let users = localStorage.getItem("users"); 
     // if(users == null){
     //     users = [];
@@ -24,3 +29,12 @@ btn.addEventListener('click', e => {
     // }
     }
   );
+
+
+  list.addEventListener('click', (e) => {
+    console.log(e.target);
+    if(e.target.classList.contains('delete')){
+        const par = e.target.parentElement;
+        par.remove();
+    }
+  });
